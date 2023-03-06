@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>BLOG</title>
+  </head>
+  <body>
+    <button id="toggle-theme">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+    </button>
+    <header>
+      <div class="container1">
+        <div class="logo">
+          <h1>My BLOG</h1>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li>
+              <button class="login-button">Login</button>
+            </li>
+            <li>
+              <button id="toggle-register">Register</button>
+            </li>
+          </ul>
+          <div class="burger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h1>New Post</h1>
+        <form id="addPost">
+          <div>
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required />
+          </div>
+          <div> 
+            <label for="body">Content</label>
+            <textarea id="body" name="body" required></textarea>
+          </div>
+          <div>
+            <label for="image-url">Image URL</label>
+            <input type="text" id="image-url" name="image-url" />
+          </div>
+          <button type="submit">Add Post</button>
+        </form>
+        <div id="output"></div>
+        <br />
+        <div id="posts"></div>
+      </div>
+      <div class="login-container">
+        <form id="login-form">
+          <h2>Login</h2>
+          <label for="username-login">Username:</label>
+          <input type="text" id="username-login" name="username" required />
+          <label for="password-login">Password:</label>
+          <input type="password" id="password-login" name="password" required />
+          <button id="login-button" type="submit">Login</button>
+          <button type="button" class="close-button">&times;</button>
+        </form>
+        <div id="output"></div>
+      </div>
+      <div class="register-container" id="register-container">
+        <form id="register-form">
+          <h2>Register</h2>
+          <label for="username-register">Username:</label>
+          <input type="text" id="username-register" name="username" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="password-register">Password:</label>
+          <input type="password" id="password-register" name="password" required />
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required />
+          <div class="error-message" id="error-message"></div>
+          <button type="submit">Register</button>
+          <button type="button" class="close-button">&times;</button>
+        </form>
+      </div>
+  
+      <template id="post-template">
+        <div class="card" data-id="">
+          <h2 class="card-title"></h2>
+          <img class="card-image" src="" alt="">
+          <p class="card-body"></p>
+          <button class="edit-button">Edit</button>
+          <button class="delete-button">Delete</button>
+          <div class="card-icons">
+            <span class="like-button"><i class="far fa-thumbs-up"></i></span>
+            <span class="unlike-button"><i class="far fa-thumbs-down"></i></span>
+          </div>
+        </div>
+      </template>
+    </main>
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+    <script src="register.js"></script>
+  </body>
+</html>
